@@ -1,34 +1,92 @@
-<div class="row mb-5 mt-5 ">
-  <div class="col-md-12">
-    <h3 class="text-center mb-3 font-weight-bold" style="color: #00842B">
-      Fale Conosco
-    </h3>
-  </div>
-</div>
+<div class="container-fluid">
 
-<div class="row">
-  <div class="col-md-6">
-    <form>
-      <label for="nome">Nome</label>
-        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+  <div class="row d-flex align-items-center">
 
-      <div class="form-group">
-        <label for="exampleFormControlInput1">E-mail</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+      <div class="col-md-6" id="img-bg"></div>
+
+      <div class="col-md-6 mt-5 mb-5">
+
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-10">
+
+                  <h1 class="text-center mb-3 font-weight-bold" style="color: #00842B">Contact us
+                  </h1>
+
+                  <div class="form-group">
+                      
+                      <input class="form-control" type="text" name="nome" id="nome" placeholder="Your name">
+                  </div>
+                  <div class="form-group">
+                      
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="assunto" id="assunto" placeholder="subject matter">
+                </div>
+
+                <div class="form-group">
+                      
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your name"></textarea>
+              </div>
+
+                  <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-outline-danger mr-4" routerLink='/entrar'>Cancelar</button>
+                      <button type="submit" class="btn btn-outline-success"> Cadastrar</button>
+                  </div>
+
+                  <hr class="mt-4 mb-4">
+                  <p class="text-center">
+                      Não tem uma conta? <a href="">Cadastre-se</a>
+                  </p>
+
+              </div>
+          </div>
+
       </div>
 
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Assunto:</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-
-      <div class="form-group d-flex justify-content-end">
-        <button class="btn btn-outline-dark">Enviar</button>
-      </div>
-    </form>
   </div>
+  <footer class="page-footer font-small gradient pt-4">
 
-  <div class="col-md-6">
-    <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.7568071470514!2d-46.66359678519027!3d-23.469235184728706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef765783f02f5%3A0x1775a9891953d98!2sAv.%20Parada%20Pinto%2C%20925%20-%20Vila%20Nova%20Cachoeirinha%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002611-003!5e0!3m2!1spt-BR!2sbr!4v1621643429073!5m2!1spt-BR!2sbr" width="350" height="310" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <h4 class="" style="color: #00842B">Siga-nos nas redes sociais</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+
+            <ul class="social-network">
+                <li>
+                    <a href="" target="_blank" class="iconLinkedin">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" target="_blank" class="iconInstagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/asena93/projetointegrador-v2.git" target="_blank" class="iconGitHub">
+                        <i class="fa fa-github-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="footer-copyright gradient text-center py-3 font-weight-bold">
+     <div><a routerLink='/sobre' >SOBRE NOS</a></div>
+     <div><a routerLink='/contato' >Contato</a></div>
+        <span style="color: #00842B"> &copy; 2021 Copyright: Maju Company </span>
+    </div>
+</footer>
 </div>
