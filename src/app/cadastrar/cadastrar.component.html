@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+
+      <div class="col-md-6 mt-5 mb-5">
+          <div class="row  d-flex justify-content-center">
+              <div class="col-md-10">
+              <h1 class="text-center "  style="color: #00842B" >cadastro</h1>
+                <div class="row">
+              <div class="form-group col-md-6">
+                  <label for="nome"  style="color: #00842B">nome</label>
+                  <input class="form-control " type="text" name="nome" id="nome" placeholder="Seu nome">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="Sobrenome"  style="color: #00842B"> Sobrenome</label>
+                <input class="form-control " type="text" name="Sobrenome" id="Sobrenome" placeholder="Seu sobrenome">
+            </div>
+            </div>
+              <div class="form-group">
+                  <label for="usuario" style="color: #00842B">Usuario</label>
+                  <input class="form-control " type="text" name="usuario" id="usuario" placeholder="Seu usuario">
+              </div>
+
+              <div class="form-group">
+                  <label for="foto cor"  style="color: #00842B">Link da foto</label>
+                  <input class="form-control " type="text" name="foto" id="foto" placeholder="link da sua foto">
+              </div>
+
+              <div class="form-group">
+                  <label for="senha cor"  style="color: #00842B">senha</label>
+                  <input class="form-control " type="password" name="senha" id="senha" placeholder="Sua senha">
+              </div>
+
+              <div class="form-group">
+                  <label for="confimSenha cor"  style="color: #00842B">Confime sua senha </label>
+                  <input class="form-control " type="password" name="confimSenha" id="confimSenha" placeholder="Confime sua senha">
+              </div>
+              <div class="form-group">
+                  <label for="tipo cor"  style="color: #00842B">Tipo de Usuario </label>
+                 <select  class="form-control"  name="tipo" id="tipo">
+                     <option >Selecione um tipo de usuario</option>
+                     <option  value="Normal">Normal</option>
+                     <option   style="color: gold" value="Admin">Administrador</option>
+                 </select>
+              </div>
+              <div class=" d-flex justify-content-center">
+                  <button type="submit" routerLink='/inicio' class="btn btn-danger mr-4">Cancelar</button>
+                  <button type="submit" class="btn btn-success">Cadastrar</button>
+              </div>
+           </div>
+          </div>
+
+      </div>
+      <div class="col-md-6" id='img-bg'>
+
+      </div>
+  </div>
+</div>

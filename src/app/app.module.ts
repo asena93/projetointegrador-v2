@@ -9,6 +9,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './contato/contato.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
 
 
@@ -22,7 +23,8 @@ import { ContatoComponent } from './contato/contato.component';
     SobreNosComponent,
     ContatoComponent,
     SobreNosComponent,
-    InicioComponent
+    InicioComponent,
+    CadastrarComponent
   ],
   imports: [
     BrowserModule,
