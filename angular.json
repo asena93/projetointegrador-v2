@@ -1,11 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-<<<<<<< HEAD
-    "analytics": "dbcddf86-1aa9-400f-bd3c-7464e1c6c187"
-=======
+    "analytics": "dbcddf86-1aa9-400f-bd3c-7464e1c6c187",
     "analytics": "43f18966-8a5d-41b2-bfc9-8f2c70b143b8"
->>>>>>> contatoJaine
   },
   "version": 1,
   "newProjectRoot": "projects",
