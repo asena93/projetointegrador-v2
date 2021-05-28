@@ -54,14 +54,14 @@
   color: black;
   padding: 10px;
   }
-  .fa-facebook-official:hover{
-   color: #3b5998;
+  .fa-github:hover{
+   color: #c13584;
   }
   .fa-instagram:hover{
       color: #c13584;
   }
   .fa-linkedin:hover{
-      color: #0072b1;
+      color: #c13584;
   }
   ul.social-network{
     list-style: nome;
