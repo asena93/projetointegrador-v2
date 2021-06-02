@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'sobre', component:SobreNosComponent},
   {path:'menu', component:MenuComponent},
   {path:'contato', component:ContatoComponent},
-  {path:'cadastrar', component:CadastrarComponent}
+  {path:'cadastrar', component:CadastrarComponent},
+  {path:'home', component:HomeComponent}
 ];
 
 @NgModule({

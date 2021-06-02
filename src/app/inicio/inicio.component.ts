@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -9,7 +8,7 @@ import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-inicio',
-  templateUrl: './inicio.component.html', 
+  templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
@@ -20,9 +19,9 @@ export class InicioComponent implements OnInit {
     private auth: AuthService,
     private router: Router
   ) { }
-    
 
-  
+
+
 
   ngOnInit() {
   }
@@ -35,10 +34,8 @@ export class InicioComponent implements OnInit {
     environment.foto = this.usuarioLogin.foto
     environment.id = this.usuarioLogin.id
 
-  console.log(environment.token)
-  console.log(environment.nomeCompleto)
-  console.log(environment.foto)
-  console.log(environment.id)
+  console.log(this.usuarioLogin)
+
 
     this.router.navigate(['/home'])
   }, erro =>{
