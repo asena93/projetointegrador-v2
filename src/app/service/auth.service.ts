@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Usuario } from '../model/Usuario';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +13,11 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  entrar(usuarioLogin: UsuarioLogin): Observable {
-    return this.http.post('https://marajuda.herokuapp.com/usuarios/entrar', usuarioLogin)
+  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
+    return this.http.post<UsuarioLogin>('https://marajuda.herokuapp.com/usuarios/entrar', usuarioLogin)
   }
 
-  cadastrar(usuario: Usuario): Observable {
-    return this.http.post('https://marajuda.herokuapp.com/usuarios/cadastrar', usuario)
+  cadastrar(usuario: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>('https://marajuda.herokuapp.com/usuarios/cadastrar', usuario)
   }
 }
