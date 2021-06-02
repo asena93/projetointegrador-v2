@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CadastrarComponent implements OnInit {
 
-  user: Usuario = new Usuario
+  usuario: Usuario = new Usuario
   confirmaSenha: string
   tipoUsuario:string
   Usuario: Usuario;
@@ -30,15 +30,15 @@ export class CadastrarComponent implements OnInit {
      this.tipoUsuario = event.target.value
    }
    cadastrar(){
-     this.user.tipo = this.tipoUsuario
+     this.usuario.tipo = this.tipoUsuario
 
-     if(this.user.senha != this.confirmaSenha){
-       alert ('A senhas estão incorretas')
-     }else{
-       this.authService.cadastrar(this.user).subscribe((resp:Usuario) => {
-         this.Usuario = resp
-         this.router.navigate(['/entrar'])
-         alert('Usuario cadastrado com sucesso')
+     if(this.usuario.senha != this.confirmaSenha){
+      alert ('A senhas estão incorretas')
+    }else{
+      this.authService.cadastrar(this.usuario).subscribe((resp:Usuario) => {
+        this.usuario = resp
+        this.router.navigate(['/inicio'])
+        alert('Usuario cadastrado com sucesso')
        })
      }
    }
