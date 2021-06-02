@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { UsuarioLogin } from 'src/models/UsuarioLogin';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-inicio',
@@ -12,8 +12,10 @@ export class InicioComponent implements OnInit {
   usuarioLogin: UsuarioLogin = new UsuarioLogin
 
   constructor() { }
+    private auth: AuthService
     
-    
+
+
   ngOnInit(): void {
   }
 
