@@ -7,16 +7,16 @@
               <h1 class="text-center "  style="color: #00842B" >Cadastro</h1>
 
                   <label for="nome"  style="color: #00842B">nome</label>
-                  <input [(ngModel)]='Usuario.nomeCompleto' class="form-control " type="text" name="nome" id="nome" placeholder="Seu nome">
+                  <input [(ngModel)]='usuario.nomeCompleto' class="form-control " type="text" name="nome" id="nome" placeholder="Seu nome">
 
               <div class="form-group">
                   <label for="email" style="color: #00842B">E-mail</label>
-                  <input [(ngModel)]='Usuario.email' class="form-control " type="text" name="email" id="email" placeholder="Seu E-mail">
+                  <input [(ngModel)]='usuario.email' class="form-control " type="text" name="email" id="email" placeholder="Seu E-mail">
               </div>
 
               <div class="form-group">
                   <label for="foto cor"  style="color: #00842B">Link da foto</label>
-                  <input [(ngModel)]='Usuario.foto' class="form-control " type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                  <input [(ngModel)]='usuario.foto' class="form-control " type="text" name="foto" id="foto" placeholder="Link da sua foto">
               </div>
 
               <div class="form-group">
@@ -26,7 +26,7 @@
 
               <div class="form-group">
                   <label for="confimSenha cor"  style="color: #00842B">Confime sua senha </label>
-                  <input [(ngModel)]='Usuario.senha' class="form-control " type="password" name="confimSenha" id="confimSenha" placeholder="Confime sua senha">
+                  <input [(ngModel)]='usuario.senha' class="form-control " type="password" name="confimSenha" id="confimSenha" placeholder="Confime sua senha">
               </div>
               <div class="form-group">
                   <label for="tipo cor"  style="color: #00842B">Tipo de Usuario </label>
@@ -38,7 +38,7 @@
               </div>
               <div class=" d-flex justify-content-center">
                   <button type="submit" routerLink='/inicio' class="btn btn-danger mr-4">Cancelar</button>
-                  <button type="submit" class="btn btn-success">Cadastrar</button>
+                  <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
               </div>
            </div>
           </div>
