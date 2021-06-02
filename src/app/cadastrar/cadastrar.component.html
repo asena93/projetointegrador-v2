@@ -6,7 +6,7 @@
               <div class="col-md-10">
               <h1 class="text-center "  style="color: #00842B" >Cadastro</h1>
 
-                  <label for="nome"  style="color: #00842B">nome</label>
+                  <label for="nome"  style="color: #00842B">Nome</label>
                   <input [(ngModel)]='usuario.nomeCompleto' class="form-control " type="text" name="nome" id="nome" placeholder="Seu nome">
 
               <div class="form-group">
@@ -33,7 +33,7 @@
                  <select  class="form-control"  name="tipo" id="tipo" (change)='tipoUser($event)'>
                      <option >Selecione um tipo de usuario</option>
                      <option  value="Normal">Normal</option>
-                     <option   style="color: gold" value="Admin">Administrador</option>
+                     <option  value="Admin">Administrador</option>
                  </select>
               </div>
               <div class=" d-flex justify-content-center">
