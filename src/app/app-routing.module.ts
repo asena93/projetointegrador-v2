@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'contato', component:ContatoComponent},
   {path:'cadastrar', component:CadastrarComponent},
   {path:'home', component:HomeComponent}
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
