@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -20,9 +19,9 @@ export class InicioComponent implements OnInit {
     private auth: AuthService,
     private router: Router
   ) { }
-    
 
-  
+
+
 
   ngOnInit() {
   }
@@ -40,7 +39,7 @@ export class InicioComponent implements OnInit {
   console.log(environment.foto)
   console.log(environment.id)
 
-    this.router.navigate(['/inicio'])
+    this.router.navigate(['/home'])
   }, erro =>{
     if(erro.status == 500){
       alert('Usuario ou senha estão incorretos')
