@@ -40,7 +40,7 @@ export class InicioComponent implements OnInit {
   console.log(environment.foto)
   console.log(environment.id)
 
-    this.router.navigate(['/inicio'])
+    this.router.navigate(['/home'])
   }, erro =>{
     if(erro.status == 500){
       alert('Usuario ou senha estão incorretos')
