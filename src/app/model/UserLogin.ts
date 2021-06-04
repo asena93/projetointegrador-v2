@@ -1,9 +1,9 @@
-export class UsuarioLogin{
+export class UserLogin{
   public id: number
-  public nomeCompleto: string
+  public nome: string
   public usuario: string
-  public senha: string
   public token: string
+  public senha: string
   public foto: string
   public tipo: string
 }

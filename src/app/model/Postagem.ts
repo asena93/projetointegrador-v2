@@ -1,12 +1,10 @@
-import { Usuario } from './Usuario';
 import { Tema } from './Tema';
-
-
-export class Postagem {
+import { User } from './User';
+export class Postagem{
   public id: number
   public titulo: string
-  public texto: string
+  public texto:string
   public data: Date
-  public usuario: Usuario
+  public usuario: User
   public tema: Tema
 }

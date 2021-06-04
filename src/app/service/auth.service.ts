@@ -1,10 +1,10 @@
-import { UsuarioLogin } from 'src/models/UsuarioLogin';
-import { Observable } from 'rxjs';
-import { Usuario } from './../../models/Usuario';
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-
+import { Observable } from 'rxjs';
+import { User } from 'src/app/model/User';
+import { environment } from 'src/environments/environment.prod';
+import { UserLogin } from '../model/UserLogin';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +14,19 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
-
-  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
-    return this.http.post<UsuarioLogin>('https://marajuda.herokuapp.com/usuarios/entrar', usuarioLogin)
+  entrar(userLogin:UserLogin): Observable<UserLogin>{
+    return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`,userLogin)
   }
+  cadastrar(user:User): Observable<User>{
+    return this.http.post<User>(`${environment.server}/usuarios/cadastrar`,user)
+  }
+  logado(){
+    let ok = false
 
-  cadastrar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('https://marajuda.herokuapp.com/usuarios/cadastrar', usuario)
+    if(environment.token != ''){
+      ok= true
+    }
+
+    return ok
   }
 }
