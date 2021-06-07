@@ -13,6 +13,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 
@@ -28,7 +29,8 @@ import { HomeComponent } from './home/home.component';
     SobreNosComponent,
     InicioComponent,
     CadastrarComponent,
-    HomeComponent
+    HomeComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
