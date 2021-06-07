@@ -2,7 +2,7 @@
 .gradient {
   /* Colors generated on: https://colorhunt.co/palette/179481 */
   background: linear-gradient(45deg, #5174e6, #5ec3f2, #6177db, #ebe0d0,#cdc2b6);
-  background-size: 300% 300%;
+  background-size: 500% 500%;
   animation: colors 10s ease infinite;
 }
 

@@ -1,4 +1,3 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -14,19 +13,22 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
+
   entrar(userLogin:UserLogin): Observable<UserLogin>{
     return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`,userLogin)
   }
   cadastrar(user:User): Observable<User>{
     return this.http.post<User>(`${environment.server}/usuarios/cadastrar`,user)
   }
+
   logado(){
-    let ok = false
+    let ok: boolean = false
 
     if(environment.token != ''){
-      ok= true
+      ok=true
     }
 
     return ok
   }
+
 }
