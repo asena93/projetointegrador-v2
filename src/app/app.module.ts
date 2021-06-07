@@ -14,6 +14,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { HomeComponent } from './home/home.component';
 import { TemaComponent } from './tema/tema.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 
 
@@ -30,7 +31,8 @@ import { TemaComponent } from './tema/tema.component';
     InicioComponent,
     CadastrarComponent,
     HomeComponent,
-    TemaComponent
+    TemaComponent,
+    TemaDeleteComponent
   ],
   imports: [
     BrowserModule,

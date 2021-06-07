@@ -1,3 +1,4 @@
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { TemaComponent } from './tema/tema.component';
 import { HomeComponent } from './home/home.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:'contato', component:ContatoComponent},
   {path:'cadastrar', component:CadastrarComponent},
   {path:'home', component:HomeComponent},
-  {path:'tema',component:TemaComponent}
+  {path:'tema', component:TemaComponent},
+  
+  {path: 'tema-delete/:id', component: TemaDeleteComponent}
 ];
 
 @NgModule({
