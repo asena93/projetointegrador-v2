@@ -10,6 +10,8 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
+
+
   constructor(
     private http: HttpClient
   ) { }
@@ -24,6 +26,9 @@ export class AuthService {
   getByIdUser(id: number): Observable<User> {
     return this.http.get<User>(`${environment.server}/usuarios/${id}`)
   }
+  atualizar(user: User): Observable<User>{
+    return this.http.put<User>(`${environment.server}/usuarios/cadastrar`,  user)
+      }
 
   logado(){
     let ok: boolean = false
