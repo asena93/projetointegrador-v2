@@ -33,12 +33,12 @@ export class PostagemEditComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     let id = this.route.snapshot.params['id']
-    this.findByIdIdPostagem(id)
+    this.findByIdPostagem(id)
     this.findAllTemas()
   }
 
-  findByIdIdPostagem(id: number) {
-    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+  findByIdPostagem(id: number){
+    this.postagemService.getByPostagem(id).subscribe((resp: Postagem)=>{
       this.postagem = resp
     })
   }

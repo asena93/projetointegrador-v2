@@ -35,9 +35,6 @@
 
 
 .gradient2 {
-  /* Colors generated on: https://colorhunt.co/palette/179481 */
-  background: linear-gradient(#5174e6, #5ec3f2,#6177db,#203385,#030b31 );
-
-  background-size: 500% 500%;
+  background-image: url('https://i.imgur.com/6Ys0O0w.jpg');
 
 }
