@@ -14,11 +14,15 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  entrar(userLogin:UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`,userLogin)
+  entrar(userLogin: UserLogin): Observable<UserLogin>{
+    return this.http.post<UserLogin>(`${environment.server}/usuarios/logar`, userLogin)
   }
-  cadastrar(user:User): Observable<User>{
-    return this.http.post<User>(`${environment.server}/usuarios/cadastrar`,user)
+  cadastrar(user: User): Observable<User>{
+    return this.http.post<User>(`${environment.server}/usuarios/cadastrar`, user)
+  }
+
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`${environment.server}/usuarios/${id}`)
   }
 
   logado(){
