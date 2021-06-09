@@ -8,19 +8,27 @@ import { Postagem } from '../model/Postagem';
   providedIn: 'root'
 })
 export class PostagemService {
-  putPostagem: any;
-  getByIdPostagem(id: number) {
-    throw new Error('Method not implemented.');
-  }
 
-  constructor(private http:HttpClient) { }
-
+  constructor(private http: HttpClient) { }
   token = {
-    headers: new HttpHeaders().set('Authorization', environment.token )
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
-  getByPostagem(id: number){
-    return this.http.get<Postagem>(`${environment.server}/postagens/${id}`,this.token)
+  getAllPostagens(): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`${environment.server}/postagens`, this.token)
+  }
+
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`${environment.server}/postagens/${id}`, this.token)
+  }
+
+
+  postPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.post<Postagem>(`${environment.server}/postagens`, postagem, this.token)
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>(`${environment.server}/postagens`, postagem, this.token)
   }
 
   deletePostagem(id: number){

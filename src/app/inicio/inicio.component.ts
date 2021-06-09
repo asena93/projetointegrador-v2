@@ -34,8 +34,6 @@ export class InicioComponent implements OnInit {
     environment.id = this.userLogin.id
     environment.senha = this.userLogin.senha
 
-    console.log(this.userLogin)
-
     this.router.navigate(['/home'])
   }, erro =>{
     if(erro.status == 500){

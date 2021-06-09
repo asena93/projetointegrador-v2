@@ -77,7 +77,7 @@ export class HomeComponent implements OnInit {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
-      this.getAllPostagens
+      this.getAllPostagens()
     })
 
   }
