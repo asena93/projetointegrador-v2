@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'inicio', pathMatch:'full'},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'tema', component:TemaComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
-  {path: 'postagem-edit/:id', component: PostagemEditComponent}
+  {path: 'postagem-edit/:id', component: PostagemEditComponent},
+  {path: 'user-edit/:id', component: UserEditComponent}
 
 ];
 
