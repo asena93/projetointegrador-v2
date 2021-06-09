@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+
+  /*tema*/
+  listaTema: Tema[]
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -40,6 +44,10 @@ export class HomeComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
+
+    /*tema*/
+    this.findAllTema()
+
   }
 
   getAllTemas() {
@@ -80,5 +88,21 @@ export class HomeComponent implements OnInit {
       this.getAllPostagens()
     })
 
+  }
+  /*tema*/
+
+
+  findAllTema(){
+    this.temaService.getAllTema().subscribe((resp: Tema[]) =>{
+      this.listaTema = resp
+    })
+  }
+  cadastrar(){
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
+      this.tema = resp
+      alert('tema cadastrado com sucesso!')
+      this.findAllTema()
+      this.tema = new Tema()
+    })
   }
 }
