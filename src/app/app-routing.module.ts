@@ -1,7 +1,7 @@
+import { HomeComponent } from './home/home.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { TemaComponent } from './tema/tema.component';
-import { HomeComponent } from './home/home.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'menu', component:MenuComponent},
   {path:'contato', component:ContatoComponent},
   {path:'cadastrar', component:CadastrarComponent},
-  {path:'home', component:HomeComponent},
+  {path: 'home', component:HomeComponent},
   {path:'tema', component:TemaComponent},
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent}

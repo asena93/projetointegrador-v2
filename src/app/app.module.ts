@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +13,6 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { HomeComponent } from './home/home.component';
 import { TemaComponent } from './tema/tema.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';

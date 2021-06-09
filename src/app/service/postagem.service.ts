@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment.prod';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Postagem } from '../model/Postagem';
+import { User } from '../model/User';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,9 @@ export class PostagemService {
 
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>(`${environment.server}/postagens`, postagem, this.token)
+  }
+
+  getByIdUser(id:number):Observable<User>{
+    return this.http.get<User>(`${environment.server}/usuarios/${id}`)
   }
 }
