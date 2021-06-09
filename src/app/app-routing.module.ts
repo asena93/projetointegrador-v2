@@ -1,3 +1,4 @@
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { TemaComponent } from './tema/tema.component';
@@ -15,15 +16,19 @@ const routes: Routes = [
   {path:'', redirectTo:'inicio', pathMatch:'full'},
 
   {path:'inicio', component:InicioComponent},
-  {path:'rodape', component:RodapeComponent},
-  {path:'sobre', component:SobreNosComponent},
-  {path:'menu', component:MenuComponent},
-  {path:'contato', component:ContatoComponent},
   {path:'cadastrar', component:CadastrarComponent},
+
+  {path:'rodape', component:RodapeComponent},
+  {path:'menu', component:MenuComponent},
+
+  {path:'sobre', component:SobreNosComponent},
+  {path:'contato', component:ContatoComponent},
   {path:'home', component:HomeComponent},
   {path:'tema', component:TemaComponent},
+
   {path: 'tema-edit/:id', component: TemaEditComponent},
-  {path: 'tema-delete/:id', component: TemaDeleteComponent}
+  {path: 'tema-delete/:id', component: TemaDeleteComponent},
+  {path:'postagem-delete/:id',component:PostagemDeleteComponent},
 ];
 
 @NgModule({
