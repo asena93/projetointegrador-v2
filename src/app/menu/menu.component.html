@@ -6,7 +6,7 @@
           <img  src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle"><img>
         </li>
         <li class="nav-item pl-3">
-          <p  class="m-0 text-uppercase font-weight-bold text-center fs-18">{{nome}}</p>
+          <p  class="m-0 text-uppercase font-weight-bold text-center fs-12">{{nome}}</p>
         </li>
         <li class="nav-item pl-3">
           <a [routerLink]="['/user-edit', id]"><p class="text-dark fs-16 m-0"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></p></a>
@@ -15,23 +15,17 @@
     </div>
 
       <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
-          <ul class="navbar-nav mr-auto  ">
+          <ul class="navbar-nav mr-auto text-center ">
 
               <li class="nav-item active">
-                 <p><a  class="nav-link font-weight-bold " routerLink='/home'>Home <span class="sr-only">(página
+                 <p><a  class="nav-link font-weight-bold text-center" routerLink='/home'>Home <span class="sr-only">(página
                    atual)</span></a></p>
               </li>
               <li class="nav-item">
-                <p><a class="nav-link font-italic font-weight-bold "  routerLink='/home'>Post</a></p>
+                <p><a class="nav-link font-weight-bold text-center"  routerLink='/home'>Meus Posts</a></p>
               </li>
               <li class="nav-item">
-                <p><a class="nav-link font-italic font-weight-bold "  routerLink='/tema'>Temas</a></p>
-              </li>
-              <li class="nav-item">
-                <p><a class="nav-link font-italic font-weight-bold " routerLink='/sobre'>Sobre Nós</a></p>
-              </li>
-              <li class="nav-item">
-                <p>  <a class="nav-link font-italic font-weight-bold "  routerLink='/contato'>Fale Conosco</a></p>
+                <p><a class="nav-link font-weight-bold text-center "  routerLink='/tema'>Temas</a></p>
               </li>
 
           </ul>
@@ -39,7 +33,7 @@
       <div>
           <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-              <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Pesquisar</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
           </form>
      </div>
 
