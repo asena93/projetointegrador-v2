@@ -83,7 +83,8 @@
           <!-- Post /////-->
 
           <!--- \\\\\\\Post-->
-          <div class="card gedf-card"
+          <div *ngIf='temaOk == false'>
+            <div class="card gedf-card"
           *ngFor='let item of listaPostagens | orderBy : key : reverse'>
               <div class="card-header">
                   <div class="d-flex justify-content-between align-items-center">
@@ -116,7 +117,51 @@
                   <a class="card-link"><i class="fa fa-mail-forward"></i> Compartilhar</a>
               </div>
           </div>
+          </div>
+
           <!-- Post /////-->
+
+          <!-- post por tema -->
+          <div *ngIf='temaOk'>
+            <div *ngFor='let tema of listaTemas'>
+              <div class="card gedf-card"
+            *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mr-2">
+                                <img class="rounded-circle" width="45" src="{{item.usuario.foto}}" alt=" MaJu company">
+                            </div>
+                            <div class="ml-2" >
+                                <div class="h5 m-0"><p>@ {{item.usuario.nome}}</p> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-body">
+                    <a class="card-link">
+                        <h5 class=" text-center card-title">{{item.titulo}}</h5>
+                    </a>
+                    <div class="col-md-6">
+                      <p class="card-text text-center mb-2 mt-2">{{item.texto}} </p>
+                    </div>
+                    <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> <p class="card-text">
+                      <small class="text-muted">
+                      {{item.data| date: 'dd/MM/yyyy'}} às {{item.data| date: 'HH:mm'}} Tema: {{tema.descricao}} </small></p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                    <a class="card-link"><i class="fa fa-comment"></i> Comente</a>
+                    <a class="card-link"><i class="fa fa-mail-forward"></i> Compartilhar</a>
+                </div>
+            </div>
+            </div>
+          </div>
+
+
+          <!-- Post por tema -->
 
       </div>
       <div class="col-md-3">

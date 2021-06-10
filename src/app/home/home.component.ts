@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
 
   /*tema*/
   listaTema: Tema[]
+  temaOk: boolean = false
 
  /*menu*/
   nome = environment.nome
@@ -55,6 +56,7 @@ export class HomeComponent implements OnInit {
 
     /*tema*/
     this.findAllTema()
+    this.getByTituloTema()
 
     /*tema-delete*/
 
@@ -125,6 +127,20 @@ export class HomeComponent implements OnInit {
   environment.nome = ''
   environment.id = 0
   environment.foto = ''
+  }
+
+  getByTituloTema() {
+    let titulo = localStorage.getItem('tituloTema')!
+    if(titulo == '' || titulo == null) {
+      this.getAllPostagens()
+      this.temaOk = false
+    } else {
+      this.temaOk = true
+      this.temaService.getByTituloTema(titulo).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
+
   }
 
 }

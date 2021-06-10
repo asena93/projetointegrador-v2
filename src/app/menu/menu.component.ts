@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit {
    foto = environment.foto
    id = environment.id
    tituloPost: string
+   tituloTema: string
 
   /* tema */
 
@@ -66,6 +67,14 @@ export class MenuComponent implements OnInit {
       this.findAllTema()
       this.tema = new Tema()
     })
+  }
+
+  pesquisarTema() {
+    localStorage.setItem('tituloTema', this.tituloTema)
+  }
+
+  pegarTema(event: any) {
+    this.tituloTema = event.target.value
   }
 }
 
