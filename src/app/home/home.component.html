@@ -1,23 +1,19 @@
 <div class="container-fluid gedf-wrapper">
   <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 ">
           <div class="card">
-              <div class="card-body">
-                  <div class="h5">@MaJu</div>
-                  <div class="h7 text-muted">Mar Ajuda</div>
-                  <div class="h7">Rede social
-                  </div>
+              <div class="card-body d-flex justify-content-center">
+                <img  src="{{foto}}" alt="imagem do user" width="100px" height="100px" class="img-fluid rounded-circle"><img>
               </div>
               <ul class="list-group list-group-flush">
+                <p  class="m-0 text-uppercase font-weight-bold text-center fs-18">{{nome}}</p>
+                <a [routerLink]="['/user-edit', id]"><p class="text-dark m-0 text-uppercase  text-center fs-10 m-0"> Trocar de usuario</p></a>
                   <li class="list-group-item">
-                      <div class="h6 text-muted">Seguidores</div>
-                      <div class="h5">5.2342</div>
+                    <a  [routerLink]="['/user-edit', id]" ><p class="text-dark m-0 text-uppercase  text-center fs-10 m-0">Minhas Postagens</p></a>
                   </li>
                   <li class="list-group-item">
-                      <div class="h6 text-muted">Seguindo</div>
-                      <div class="h5">6758</div>
+                    <a  href="#" (click)='sair()'><p class="text-danger m-0 text-uppercase  text-center fs-10 m-0">Sair</p></a>
                   </li>
-                  <li class="list-group-item">Vestibulum at eros</li>
               </ul>
           </div>
       </div>
@@ -98,10 +94,10 @@
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="mr-2">
-                              <img class="rounded-circle" width="45" src="https://i.imgur.com/SRVUYno.png" alt=" MaJu company">
+                              <img class="rounded-circle" width="45" src="{{item.usuario.foto}}" alt=" MaJu company">
                           </div>
                           <div class="ml-2" >
-                              <div class="h5 m-0">@ Seu Zé </div>
+                              <div class="h5 m-0"><p>@ {{item.usuario.nome}}</p> </div>
                           </div>
                       </div>
                       <div>
@@ -125,7 +121,7 @@
                       <h5 class=" text-center card-title">{{item.titulo}}</h5>
                   </a>
                   <div class="col-md-6">
-                    <p class="card-text mb-2 mt-2">{{item.texto}} </p>
+                    <p class="card-text text-center mb-2 mt-2">{{item.texto}} </p>
                   </div>
                   <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> <p class="card-text">
                     <small class="text-muted">
@@ -210,3 +206,7 @@
     </div>
   </div>
 </div>
+
+
+
+

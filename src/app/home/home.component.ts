@@ -4,7 +4,7 @@ import { Tema } from 'src/app/model/Tema';
 import { TemaService } from './../service/tema.service';
 import { PostagemService } from './../service/postagem.service';
 import { Postagem } from './../model/Postagem';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 
@@ -29,11 +29,17 @@ export class HomeComponent implements OnInit {
   /*tema*/
   listaTema: Tema[]
 
+ /*menu*/
+  nome = environment.nome
+   foto = environment.foto
+   id = environment.id
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
+    private authService: AuthService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -47,6 +53,10 @@ export class HomeComponent implements OnInit {
 
     /*tema*/
     this.findAllTema()
+
+    /*tema-delete*/
+
+
 
   }
 
@@ -105,4 +115,14 @@ export class HomeComponent implements OnInit {
       this.tema = new Tema()
     })
   }
+
+/*tema-delete*/
+  sair(){
+  this.router.navigate(['/inicio'])
+  environment.token = ''
+  environment.nome = ''
+  environment.id = 0
+  environment.foto = ''
+  }
+
 }
