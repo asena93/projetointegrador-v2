@@ -1,9 +1,9 @@
+import { PostagemService } from './../service/postagem.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
 import { AuthService } from '../service/auth.service';
-import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -16,6 +16,7 @@ export class MenuComponent implements OnInit {
    nome = environment.nome
    foto = environment.foto
    id = environment.id
+   tituloPost: string
 
   /* tema */
 

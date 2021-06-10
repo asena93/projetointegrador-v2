@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+  key = 'data'
+  reverse = true
 
   /*tema*/
   listaTema: Tema[]
