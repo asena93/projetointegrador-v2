@@ -89,7 +89,8 @@
           <!-- Post /////-->
 
           <!--- \\\\\\\Post-->
-          <div class="card gedf-card" *ngFor='let item of listaPostagens'>
+          <div class="card gedf-card" 
+          *ngFor='let item of listaPostagens | orderBy : key : reverse'>
               <div class="card-header">
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="d-flex justify-content-between align-items-center">
@@ -188,7 +189,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let tema of listaTema">
+            <tr *ngFor="let tema of listaTema | orderBy : key : reverse">
               <th scope="row">{{tema.id}}</th>
               <td >{{tema.descricao}}</td>
               <td class="d-flex justify-content-center ">
