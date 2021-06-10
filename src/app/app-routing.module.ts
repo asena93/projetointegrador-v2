@@ -1,3 +1,4 @@
+import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
 import { HomeComponent } from './home/home.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'contato', component:ContatoComponent},
   {path:'home', component:HomeComponent},
   {path:'tema', component:TemaComponent},
+  {path:'minhas-postagens',component:MinhasPostagensComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},

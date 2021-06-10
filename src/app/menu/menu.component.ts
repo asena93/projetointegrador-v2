@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Tema } from '../model/Tema';
+import { AuthService } from '../service/auth.service';
+import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,11 +17,31 @@ export class MenuComponent implements OnInit {
    foto = environment.foto
    id = environment.id
 
+  /* tema */
+
+  listaTema: Tema[]
+  tema: Tema = new Tema
+
+
+
   constructor(
-    private router : Router
+    private router : Router,
+    private postagemService: PostagemService,
+    private temaService: TemaService,
+    private authService: AuthService,
+    private route: ActivatedRoute
   ) { }
 
-  ngOnInit() {
+  ngOnInit(
+
+
+
+  ) {
+
+
+    /*tema */
+
+    this.findAllTema()
   }
 
   sair(){
@@ -26,6 +50,21 @@ export class MenuComponent implements OnInit {
     environment.nome = ''
     environment.id = 0
     environment.foto = ''
+  }
+
+  /* tema*/
+  findAllTema(){
+    this.temaService.getAllTema().subscribe((resp: Tema[]) =>{
+      this.listaTema = resp
+    })
+  }
+  cadastrar(){
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
+      this.tema = resp
+      alert('tema cadastrado com sucesso!')
+      this.findAllTema()
+      this.tema = new Tema()
+    })
   }
 }
 
