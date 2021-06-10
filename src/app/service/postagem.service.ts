@@ -1,3 +1,4 @@
+import { Tema } from 'src/app/model/Tema';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -22,6 +23,13 @@ export class PostagemService {
     return this.http.get<Postagem>(`${environment.server}/postagens/${id}`, this.token)
   }
 
+  getByTituloPostagem(titulo: string): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>(`${environment.server}/postagens/titulo/${titulo}`)
+  }
+
+  getByNomeTema(nome: string): Observable<Tema[]> {
+    return this.http.get<Tema[]>(`${environment.server}/postagens/nome/${nome}`, this.token)
+  }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>(`${environment.server}/postagens`, postagem, this.token)

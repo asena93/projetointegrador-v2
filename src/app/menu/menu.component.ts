@@ -1,3 +1,5 @@
+import { Postagem } from './../model/Postagem';
+import { PostagemService } from './../service/postagem.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -12,6 +14,7 @@ export class MenuComponent implements OnInit {
    nome = environment.nome
    foto = environment.foto
    id = environment.id
+   tituloPost: string
 
   constructor(
     private router : Router
