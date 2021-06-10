@@ -33,6 +33,7 @@ export class InicioComponent implements OnInit {
     environment.foto = this.userLogin.foto
     environment.id = this.userLogin.id
     environment.senha = this.userLogin.senha
+    environment.tipo = this.userLogin.tipo
 
     this.router.navigate(['/home'])
   }, erro =>{
