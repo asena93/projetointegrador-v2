@@ -27,6 +27,10 @@ export class PostagemDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if(environment.token == ''){
+      alert ('Sessão expirou')
+      this.router.navigate(['/inicio'])
+    }
     window.scroll(0,0)
 
     if(environment.token == ''){

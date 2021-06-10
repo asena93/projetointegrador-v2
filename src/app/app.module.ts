@@ -21,6 +21,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
 
 
 
@@ -43,7 +44,8 @@ import { OrderModule } from 'ngx-order-pipe';
     PostagemComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
-    UserEditComponent
+    UserEditComponent,
+    MinhasPostagensComponent
   ],
   imports: [
     BrowserModule,
