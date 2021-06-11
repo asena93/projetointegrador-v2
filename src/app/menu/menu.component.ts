@@ -23,6 +23,7 @@ export class MenuComponent implements OnInit {
 
   listaTema: Tema[]
   tema: Tema = new Tema
+  alertas: any;
 
 
 
@@ -63,7 +64,7 @@ export class MenuComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
       this.tema = resp
-      alert('tema cadastrado com sucesso!')
+      this.alertas.showAlertSucces('tema cadastrado com sucesso!')
       this.findAllTema()
       this.tema = new Tema()
     })
@@ -71,6 +72,11 @@ export class MenuComponent implements OnInit {
 
   pesquisarTema() {
     localStorage.setItem('tituloTema', this.tituloTema)
+    localStorage.setItem('filtroOk', 'true')
+    this.router.navigate(['/minhas-postagens'])
+    setTimeout(() => {
+      this.router.navigate(['/home'])
+    }, 50)
   }
 
   pegarTema(event: any) {

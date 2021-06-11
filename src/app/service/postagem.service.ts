@@ -43,4 +43,8 @@ export class PostagemService {
     return this.http.delete(`${environment.server}/postagens/${id}`,this.token)
   }
 
+  filtroTema() {
+    return localStorage.getItem('tituloTema')
+  }
+
 }

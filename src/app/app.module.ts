@@ -23,6 +23,8 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
 import { UteisComponent } from './uteis/uteis.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -49,14 +51,16 @@ import { UteisComponent } from './uteis/uteis.component';
     PostagemDeleteComponent,
     UserEditComponent,
     MinhasPostagensComponent,
-    UteisComponent
+    UteisComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
