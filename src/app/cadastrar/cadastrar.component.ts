@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { AuthService } from './../service/auth.service';
 
 
@@ -15,6 +16,7 @@ export class CadastrarComponent implements OnInit {
   user: User = new User
   confirmaSenha: string
   tipoUsuario:string
+  alertas: any;
 
   constructor(
     private auth: AuthService,
@@ -40,12 +42,12 @@ export class CadastrarComponent implements OnInit {
 
 
     if(this.user.senha != this.confirmaSenha){
-      alert ('A senhas estão incorretas')
+      this.alertas.showAlertDanger('A senhas estão incorretas')
     }else{
       this.auth.cadastrar(this.user).subscribe((resp:User) => {
         this.user = resp
         this.router.navigate(['/inicio'])
-        alert('Usuario cadastrado com sucesso')
+        this.alertas.showAlertSuccess('Usuario cadastrado com sucesso')
         console.log(this.user)
       })
     }

@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { AuthService } from './../service/auth.service';
 import { User } from 'src/app/model/User';
 import { Tema } from 'src/app/model/Tema';
@@ -7,6 +8,7 @@ import { Postagem } from './../model/Postagem';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-home',
@@ -42,13 +44,18 @@ export class HomeComponent implements OnInit {
     private postagemService: PostagemService,
     private temaService: TemaService,
     private authService: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     if(environment.token == ''){
-      alert ('Sessão expirou')
+      this.alertas.showAlertInfo('Sessão expirou')
       this.router.navigate(['/inicio'])
+    }
+
+    if(localStorage.getItem('filtroOk') == 'true') {
+      this.getByTituloTema()
     }
 
     this.getAllTemas()
@@ -56,7 +63,7 @@ export class HomeComponent implements OnInit {
 
     /*tema*/
     this.findAllTema()
-    this.getByTituloTema()
+    /* this.getByTituloTema() */
 
     /*tema-delete*/
 
@@ -97,7 +104,7 @@ export class HomeComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSucces('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
@@ -114,7 +121,7 @@ export class HomeComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
       this.tema = resp
-      alert('tema cadastrado com sucesso!')
+      this.alertas.showAlertSucces('tema cadastrado com sucesso!')
       this.findAllTema()
       this.tema = new Tema()
     })
@@ -131,6 +138,7 @@ export class HomeComponent implements OnInit {
 
   getByTituloTema() {
     let titulo = localStorage.getItem('tituloTema')!
+    localStorage.setItem('filtroOk', 'false')
     if(titulo == '' || titulo == null) {
       this.getAllPostagens()
       this.temaOk = false

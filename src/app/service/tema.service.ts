@@ -35,6 +35,6 @@ export class TemaService {
   }
 
   getByTituloTema(titulo: string): Observable<Tema[]> {
-    return this.http.get<Tema[]>(`${environment.server}/tema/titulo/${titulo}`, this.token)
+    return this.http.get<Tema[]>(`${environment.server}/tema/nome/${titulo}`, this.token)
   }
 }
