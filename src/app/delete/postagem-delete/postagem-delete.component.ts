@@ -27,15 +27,11 @@ export class PostagemDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
-      alert ('Sessão expirou')
-      this.router.navigate(['/inicio'])
-    }
     window.scroll(0,0)
 
     if(environment.token == ''){
       alert ('Sessão expirou')
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/inicio'])
     }
 
     this.idPost = this.route.snapshot.params['id']
@@ -51,7 +47,7 @@ export class PostagemDeleteComponent implements OnInit {
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
       alert('Postagem apagada!')
-      this.router.navigate(['/home'])
+      this.router.navigate(['/minhas-postagens'])
     })
   }
 }
