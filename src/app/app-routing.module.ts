@@ -1,3 +1,4 @@
+import { UteisComponent } from './uteis/uteis.component';
 import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.component';
 import { HomeComponent } from './home/home.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
@@ -29,12 +30,13 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'tema', component:TemaComponent},
   {path:'minhas-postagens',component:MinhasPostagensComponent},
+  {path:'uteis',component:UteisComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
   {path:'postagem-delete/:id',component:PostagemDeleteComponent},
   {path: 'postagem-edit/:id', component: PostagemEditComponent},
-  {path: 'user-edit/:id', component: UserEditComponent}
+  {path: 'user-edit/:id', component: UserEditComponent},
 
 ];
 
