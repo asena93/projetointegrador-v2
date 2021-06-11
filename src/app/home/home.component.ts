@@ -146,6 +146,12 @@ export class HomeComponent implements OnInit {
       this.temaOk = true
       this.temaService.getByTituloTema(titulo).subscribe((resp: Tema[]) => {
         this.listaTemas = resp
+        this.listaTemas.forEach((item) => {
+          if(item.postagem.length == 0) {
+            this.alertas.showAlertInfo('Não existe postagens com esse Tema!')
+            this.getAllPostagens()
+          }
+        })
       })
     }
 
