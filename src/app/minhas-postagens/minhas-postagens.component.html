@@ -44,17 +44,23 @@
                   </div>
 
               </div>
-              <div class="card-body  ">
+              <div class="card-body">
+                <div class="d-flex justify-content-center mt-2">
                   <a class="card-link">
-                      <h5 class=" text-center card-title">{{item.titulo}}</h5>
-                  </a>
-                  <div class="col-md-6 ">
-                    <p class="card-text text-center  mb-2 mt-2">{{item.texto}} </p>
+                    <h5 class=" text-center card-title">{{item.titulo}}</h5>
+                </a>
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                  <div class="col-md-6">
+                    <p class="card-text text-center mb-2 mt-2">{{item.texto}} </p>
                   </div>
+                </div>
+                <div class="d-flex justify-content-end mt-2">
                   <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> <p class="card-text">
                     <small class="text-muted">
                     {{item.data| date: 'dd/MM/yyyy'}} às {{item.data| date: 'HH:mm'}} Tema: {{item.tema.descricao}} </small></p>
                   </div>
+                </div>
               </div>
               <div class="card-footer">
                   <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
