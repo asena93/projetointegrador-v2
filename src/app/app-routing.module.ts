@@ -28,7 +28,6 @@ const routes: Routes = [
   {path:'sobre', component:SobreNosComponent},
   {path:'contato', component:ContatoComponent},
   {path:'home', component:HomeComponent},
-  {path:'tema', component:TemaComponent},
   {path:'minhas-postagens',component:MinhasPostagensComponent},
   {path:'uteis',component:UteisComponent},
 
