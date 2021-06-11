@@ -104,7 +104,7 @@ export class HomeComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      this.alertas.showAlertSucces('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
       this.tema = resp
-      this.alertas.showAlertSucces('tema cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('tema cadastrado com sucesso!')
       this.findAllTema()
       this.tema = new Tema()
     })

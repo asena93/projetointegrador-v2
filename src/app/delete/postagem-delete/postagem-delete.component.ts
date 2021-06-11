@@ -1,3 +1,4 @@
+import { AlertasService } from './../../service/alertas.service';
 import { Tema } from 'src/app/model/Tema';
 import { PostagemService } from './../../service/postagem.service';
 import { Component, OnInit } from '@angular/core';
@@ -23,14 +24,15 @@ export class PostagemDeleteComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      alert ('Sessão expirou')
+      this.alertas.showAlertInfo('Sessão expirou')
       this.router.navigate(['/inicio'])
     }
 
@@ -46,7 +48,7 @@ export class PostagemDeleteComponent implements OnInit {
 
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
-      alert('Postagem apagada!')
+      this.alertas.showAlertSuccess('Postagem apagada!')
       this.router.navigate(['/minhas-postagens'])
     })
   }

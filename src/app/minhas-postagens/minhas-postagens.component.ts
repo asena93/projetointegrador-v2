@@ -1,3 +1,4 @@
+import { AlertasService } from './../service/alertas.service';
 import { TemaService } from './../service/tema.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -38,7 +39,8 @@ export class MinhasPostagensComponent implements OnInit {
     private postagemService: PostagemService,
     private temaService: TemaService,
     private authService: AuthService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -47,7 +49,7 @@ export class MinhasPostagensComponent implements OnInit {
       this.router.navigate(['/inicio'])
     }
 
-    
+
     this.findByIdUser()
   }
 
@@ -84,7 +86,7 @@ export class MinhasPostagensComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
@@ -101,7 +103,7 @@ export class MinhasPostagensComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
       this.tema = resp
-      alert('tema cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('tema cadastrado com sucesso!')
       this.findAllTema()
       this.tema = new Tema()
     })

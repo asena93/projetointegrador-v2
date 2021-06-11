@@ -21,7 +21,4 @@ export class AlertasComponent implements OnInit {
   onClose() {
     this.modal.hide()
   }
-
-
-
 }
