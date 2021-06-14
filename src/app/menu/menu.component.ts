@@ -42,10 +42,12 @@ export class MenuComponent implements OnInit {
   ) {
 
 
-    /*tema */
+    /*tema*/
 
     this.findAllTema()
   }
+
+  /*sair*/
 
   sair(){
     this.router.navigate(['/entrar'])
@@ -70,6 +72,8 @@ export class MenuComponent implements OnInit {
     })
   }
 
+
+  /*Pesquisar */
   pesquisarTema() {
     localStorage.setItem('tituloTema', this.tituloTema)
     localStorage.setItem('filtroOk', 'true')
