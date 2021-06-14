@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
   /* tema */
 
   listaTema: Tema[]
-  tema: Tema = new Tema
+  tema: Tema = new Tema()
   alertas: any;
 
 
@@ -35,12 +35,7 @@ export class MenuComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit(
-
-
-
-  ) {
-
+  ngOnInit() {
 
     /*tema */
 
@@ -59,14 +54,6 @@ export class MenuComponent implements OnInit {
   findAllTema(){
     this.temaService.getAllTema().subscribe((resp: Tema[]) =>{
       this.listaTema = resp
-    })
-  }
-  cadastrar(){
-    this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
-      this.tema = resp
-      this.alertas.showAlertSucces('tema cadastrado com sucesso!')
-      this.findAllTema()
-      this.tema = new Tema()
     })
   }
 

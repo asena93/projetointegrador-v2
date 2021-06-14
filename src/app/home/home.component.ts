@@ -65,10 +65,6 @@ export class HomeComponent implements OnInit {
     this.findAllTema()
     /* this.getByTituloTema() */
 
-    /*tema-delete*/
-
-
-
   }
 
   getAllTemas() {
@@ -86,6 +82,7 @@ export class HomeComponent implements OnInit {
   getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
+      console.log(this.listaPostagens)
     })
   }
 

@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class TemaEditComponent implements OnInit {
   tema: Tema = new Tema()
+  token = environment.token
 
   constructor(
     private temaService: TemaService,
@@ -31,15 +32,19 @@ export class TemaEditComponent implements OnInit {
   findByIdTema(id: number){
     this.temaService.getByIdTema(id).subscribe((resp: Tema)=>{
       this.tema = resp
-      console.log(this.findByIdTema)
     })
   }
   atualizar(){
     this.temaService.putTema(this.tema).subscribe((resp:Tema)=>{
       this.tema = resp
       this.alertas.showAlertSuccess('Tema atualizado com sucesso!')
-      this.router.navigate(['/home'])
+      environment.token = ''
+      setTimeout(() => {
+        environment.token = this.token
+        this.router.navigate(['/home'])
+      }, 50)
     })
+
 
   }
 }

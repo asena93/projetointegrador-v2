@@ -25,6 +25,7 @@ import { MinhasPostagensComponent } from './minhas-postagens/minhas-postagens.co
 import { UteisComponent } from './uteis/uteis.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalTemaComponent } from './modal-tema/modal-tema.component';
 
 
 
@@ -52,7 +53,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     UserEditComponent,
     MinhasPostagensComponent,
     UteisComponent,
-    AlertasComponent
+    AlertasComponent,
+    ModalTemaComponent
   ],
   imports: [
     BrowserModule,

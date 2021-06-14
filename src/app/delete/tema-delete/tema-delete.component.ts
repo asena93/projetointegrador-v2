@@ -14,6 +14,7 @@ export class TemaDeleteComponent implements OnInit {
 
   tema: Tema = new Tema()
   idTema: number
+  token = environment.token
 
   constructor(
     private temaService: TemaService,
@@ -41,7 +42,11 @@ export class TemaDeleteComponent implements OnInit {
   delete() {
     this.temaService.deleteTema(this.idTema).subscribe(() => {
       this.alertas.showAlertSuccess('Tema apagado com sucesso!')
-      this.router.navigate(['/home'])
+      environment.token = ''
+      setTimeout(() => {
+        environment.token = this.token
+        this.router.navigate(['/home'])
+      }, 50)
     })
   }
 
