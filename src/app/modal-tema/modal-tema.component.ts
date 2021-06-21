@@ -27,7 +27,7 @@ export class ModalTemaComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema) =>{
       this.tema = resp
-      this.alertas.showAlertSuccess('tema cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Tema cadastrado com sucesso!')
       this.findAllTema()
       this.tema = new Tema()
       this.router.navigate(['/minhas-postagens'])
