@@ -2,7 +2,7 @@
 
 
 Projeto integrador do curso de Desenvolvedor Java Full Stack Jr. da Generation Brasil.
-<p align="center">
+<p>
   <a href="https://majucompany.netlify.app/">
     <img src="https://github.com/asena93/projetointegrador-v2/blob/main/src/assets/img/maju.jpg" height="350" width="350" alt="Unform" />
   </a>
