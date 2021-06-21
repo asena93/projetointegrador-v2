@@ -1,4 +1,4 @@
-<h1  align="center">Maju - Mar Ajuda</h1>
+<h1>Maju - Mar Ajuda</h1>
 
 
 Projeto integrador do curso de Desenvolvedor Java Full Stack Jr. da Generation Brasil.
