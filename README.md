@@ -1,27 +1,56 @@
-# ProjetoIntegradorV2
+<h1  align="center">Maju - Mar Ajuda</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
-## Development server
+Projeto integrador do curso de Desenvolvedor Java Full Stack Jr. da Generation Brasil.
+<p align="center">
+  <a href="https://majucompany.netlify.app/">
+    <img src="https://github.com/asena93/projetointegrador-v2/blob/main/src/assets/img/maju.jpg" height="350" width="350" alt="Unform" />
+  </a>
+</p>
+  
+<h1  align="center">Sobre</h1>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<p>
+  https://majucompany.netlify.app/
 
-## Code scaffolding
+MaJu é uma rede social que foi desenvolvida para ajudar a combater a poluição marinha, seguindo o Objetivo de Desenvolvimento Sustentável da ONU, de número 14, vida debaixo d'água. Nosso objetivo é trazer de forma efetiva e acessível, a conscientização e maneiras simples de lidarmos todos os dias com essa questão.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+</p>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+<p align="center">
+  <h1 align="center">Tecnologias utilizadas</h1>
+<h2>Back End</h2>
+- Java
+- Spring Boot
+- JPA / Hibernate
+- Maven
+ <h2>Front End</h2>
+- HTML 
+- CSS
+- JS
+- TypeScript
+- <h2>Implantação em produção</h2>
+- Back end: Heroku
+- Front end web: Netlify
+- Banco de dados: MySQL
+  </p>
+  <h4 align="center"> 
+	✅ Versão 1.0 concluída
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+</h4>
 
-## Running end-to-end tests
+<h1  align="center">Integrantes</h1>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<td align="center">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/74274827?v=4" width="115;" alt=""/><br/><sub><b>Alessandro Sena</b></sub></a><br/><a href="https://github.com/asena93"</a></td>
+ 
+ <td align="center">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80486139?v=4" width="115;" alt=""/><br/><sub><b>Bruna Bonifácio</b></sub></a><br/><a href="https://github.com/brubonifacio"</a></td>
+ 
+ <td align="center">
+ <img tyle="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80522229?v=4" width="115;" alt=""/><br/><sub><b>Rodrigo Dias</b></sub></a><br/><a href="https://github.com/RodrigoPDias"</a></td>
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 
+ 
