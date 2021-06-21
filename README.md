@@ -19,13 +19,13 @@ MaJu é uma rede social que foi desenvolvida para ajudar a combater a poluição
 
 
 
-<p>
+
   <h1>Tecnologias utilizadas</h1>
 <h2>Back End</h2>
+<p>
 - Java
 - Spring Boot
-- JPA / Hibernate
-- Maven
+- JPA 
  <h2>Front End</h2>
 - HTML 
 - CSS
