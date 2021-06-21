@@ -8,7 +8,7 @@ Projeto integrador do curso de Desenvolvedor Java Full Stack Jr. da Generation B
   </a>
 </p>
   
-<h1  align="center">Sobre</h1>
+<h1>Sobre</h1>
 
 <p>
   https://majucompany.netlify.app/
@@ -19,8 +19,8 @@ MaJu é uma rede social que foi desenvolvida para ajudar a combater a poluição
 
 
 
-<p align="center">
-  <h1 align="center">Tecnologias utilizadas</h1>
+<p>
+  <h1>Tecnologias utilizadas</h1>
 <h2>Back End</h2>
 - Java
 - Spring Boot
@@ -41,7 +41,7 @@ MaJu é uma rede social que foi desenvolvida para ajudar a combater a poluição
 
 </h4>
 
-<h1  align="center">Integrantes</h1>
+<h1>Integrantes</h1>
 
 <td align="center">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/74274827?v=4" width="115;" alt=""/><br/><sub><b>Alessandro Sena</b></sub></a><br/><a href="https://github.com/asena93"</a></td>
